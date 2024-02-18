@@ -1,6 +1,7 @@
 img
 {
     position:absolute;
-    top: 0px;
-    left: 0px;
+}
+#frame{
+    left: 1px;
 }
