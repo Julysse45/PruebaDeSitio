@@ -1,7 +1,90 @@
-img
-{
-    position:absolute;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-#frame{
-    left: 1px;
+
+body {
+    background: black;
+    background-image: url(https://assets.referendum2024.campaigns.fire-emblem-heroes.com/_next/static/media/bg_pc.d83c8809.jpg);
+    background-size: 100vw auto;
+    background-attachment: fixed;
+    background-position: center;
+    overflow-y: scroll;
+}
+
+.tabs {
+    width: 960px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tabs li {
+    display: block;
+}
+
+.tabs input[type="radio"] {
+    display: none;
+}
+
+.tabs label {
+    display: block;
+    background: entrybg01.png;
+    max-height: 60px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.tabs label:hover {
+    background: entrybg01.png;
+}
+
+.tabs label:active {
+    background: entrybg02.png;
+}
+
+.tabs .tab-content {
+    z-index: 3;
+    display: none;
+    position: absolute;
+    top: 150px;
+    right: 0;
+    left: 0;
+}
+
+.tab-content{
+    width: 1290px;
+    margin: auto;
+    border: 5px solid transparent;
+    border-radius: 1px;
+    background: 
+      linear-gradient(black, black) padding-box, 
+      linear-gradient(
+        180deg, 
+        #230f7e, 
+        #ac3d18
+      ) border-box;
+}
+
+
+.tabs [id^="tab"]:checked + label {
+    background-image: entrybg04.png;
+    cursor: default;
+}
+
+.tabs [id^="tab"]:checked ~ [id^="tab-content"] {
+    display: flex;
+    justify-content: center;
+    animation: fadeEffect 0.5s;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
