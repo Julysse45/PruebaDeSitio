@@ -30,7 +30,7 @@ body {
 
 .tabs label {
     display: block;
-    background: entrybg01.png;
+    background: url(https://raw.githubusercontent.com/Julysse45/PruebaDeSitio/main/entrybg01.png);
     max-height: 60px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
